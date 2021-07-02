@@ -2,237 +2,719 @@ export default {
     allPhone: [
         {
             name: '腾讯黑鲨游戏手机3S', brand: '小米手机', id: '113001',
-            img:'https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1595486329.61241316.jpg',
-            data: [{
-                title: '速览', list: [
+            img: 'https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1595486329.61241316.jpg',
+            datas: [{
+                title: '速览', id: '113001-0', list: [
                     {
-                        id:'113001-0-0',
-                        label: 'CPU型号', icon: 'mdi-domain', arr: [
-                            {name: '', value: '骁龙865'},
+                        id: '113001-0-0',
+                        label: 'CPU型号', icon: 'mdi-domain', iconfont: 'cpu', arr: [
+                            {id: '113001-0-0-1', name: '', value: '骁龙865'},
                         ]
-                    },{
-                        id:'113001-0-1',
-                        label: '相机', icon: 'mdi-domain', arr: [
-                            {name: '前置相机', value: '2000万像素'},
-                            {name: '后置相机', value: '6400万+1300万+500万像素'}
+                    }, {
+                        id: '113001-0-1',
+                        label: '相机', icon: 'mdi-domain', iconfont: 'camera', arr: [
+                            {id: '113001-0-1-1', name: '前置相机', value: '2000万像素'},
+                            {id: '113001-0-1-2', name: '后置相机', value: '6400万+1300万+500万像素'}
                         ]
-                    },{
-                        id:'113001-0-2',
-                        label: '屏幕尺寸', icon: 'mdi-domain', arr: [
-                            {name: '', value: '6.67英寸'},
+                    }, {
+                        id: '113001-0-2',
+                        label: '屏幕尺寸', icon: 'mdi-domain', iconfont: 'screen', arr: [
+                            {id: '113001-0-2-1', name: '屏幕尺寸', value: '6.67英寸'},
                         ]
-                    },{
-                        id:'113001-0-3',
-                        label: '电池', icon: 'mdi-domain', arr: [
-                            {name: '电池容量', value: '4720mAh(typ)/4600mAh(min)'},
-                            {name: '充电规格', value: '支持 SQC快充协议，65W极速闪充，标配65W充电器'}
+                    }, {
+                        id: '113001-0-3',
+                        label: '电池', icon: 'mdi-domain', iconfont: 'battery', arr: [
+                            {id: '113001-0-3-1', name: '电池容量', value: '4720mAh(typ)' + '\n' + '/4600mAh(min)'},
+                            {id: '113001-0-3-2', name: '充电规格', value: '支持 SQC快充协议，65W极速闪充，标配65W充电器'},
+                            // { id:'113001-0-3-1',name: '电池容量', value: '4720mAh(typ)/4600mAh(min)'},
+                            // { id:'113001-0-3-2',name: '充电规格', value: '支持 SQC快充协议，65W极速闪充，标配65W充电器'}
                         ]
-                    },{
-                        id:'113001-0-4',
-                        label: '解锁方式', icon: 'mdi-domain', arr: [
-                            {name: '指纹识别', value: '屏幕指纹'},
-                            {name: '人脸识别', value: ''}
+                    }, {
+                        id: '113001-0-4',
+                        label: '解锁方式', icon: 'mdi-domain', iconfont: 'lock', arr: [
+                            {id: '113001-0-4-1', name: '指纹识别', value: '屏幕指纹'},
+                            {id: '113001-0-4-2', name: '人脸识别', value: '-'}
                         ]
-                    },{
-                        id:'113001-0-5',
-                        label: '生活应用', icon: 'mdi-domain', arr: [
-                            {name: 'NFC', value: ''},
-                            {name: '红外遥控', value: ''}
+                    }, {
+                        id: '113001-0-5',
+                        label: '生活应用', icon: 'mdi-domain', iconfont: 'life', arr: [
+                            {id: '113001-0-5-1', name: 'NFC', value: '-'},
+                            {id: '113001-0-5-2', name: '红外遥控', value: '-'}
                         ]
-                    },{
-                        id:'113001-0-6',
-                        label: '其他特色', icon: 'mdi-domain', arr: [
-                            {name: '操作系统', value: 'JOYUI12操作系统'},
+                    }, {
+                        id: '113001-0-6',
+                        label: '其他特色', icon: 'mdi-domain', iconfont: 'other', arr: [
+                            {id: '113001-0-6-1', name: '操作系统', value: 'JOYUI12操作系统'},
 
                         ]
                     },]
             }, {
-                title: '发布时间', list: [{  id:'113001-1',  arr: [{name: '发布时间', value: '2020年7月'}]}]
+                title: '发布时间', id: '113001-1', list: [{
+                    id: '113001-1-1', label: '', arr: [
+                        {id: '113001-1-1-1', name: '发布时间', value: '2020年7月'}]
+                }]
             }, {
-                title: '尺寸和重量', list: [{  id:'113001-2',  arr: [{name: '机身高度', value: '168.72mm'},
-                    {name: '机身宽度', value: '77.33mm'},
-                    {name: '机身厚度', value: '10.42mm'},
-                    {name: '重量', value: '222g'}]}]
+                title: '尺寸和重量', id: '113001-2', list: [{
+                    id: '113001-2-1', label: '', arr: [
+                        {id: '113001-2-1-1', name: '机身高度', value: '168.72mm'},
+                        {id: '113001-2-1-2', name: '机身宽度', value: '77.33mm'},
+                        {id: '113001-2-1-3', name: '机身厚度', value: '10.42mm'},
+                        {id: '113001-2-1-4', name: '重量', value: '222g'}]
+                }]
             }, {
-                title: '处理器', list: [{  id:'113001-3',  arr:[{name: 'CPU型号', value: '骁龙865'},
-                    {name: 'CPU主频', value: '-'}]}]
+                title: '处理器', id: '113001-3', list: [{
+                    id: '113001-3-1', label: '', arr: [
+                        {id: '113001-3-1-1', name: 'CPU型号', value: '骁龙865'},
+                        {id: '113001-3-1-2', name: 'CPU主频', value: '-'}]
+                }]
             }, {
-                title: '电池信息', list:[{  id:'113001-4',  arr: [{name: '电池容量', value: '4720mAh(typ)/4600mAh(min)'},
-                    {name: '快充技术', value: '支持 SQC快充协议，65W极速闪充，标配65W充电器\n' +
-                            '\n' +
-                            'USBType-C双面充电接口'}]}]
+                title: '电池信息', id: '113001-4', list: [{
+                    id: '113001-4-1', label: '', arr: [
+                        {id: '113001-4-1-1', name: '电池容量', value: '4720mAh(typ)' + '\n' + '/4600mAh(min)'},
+                        {
+                            id: '113001-4-1-2', name: '快充技术', value: '支持 SQC快充协议，65W极速闪充，标配65W充电器\n' +
+                                '\n' +
+                                'USBType-C双面充电接口'
+                        }]
+                }]
             }, {
-                title: '显示屏', list: [{  id:'113001-5',  arr:[{name: '屏幕尺寸', value: '6.67英寸'},
-                    {name: '屏幕分辨率', value: '1080*2400分辨率'},
-                    {name: '屏幕刷新率', value: '支持90Hz/120Hz刷新率'},
-                    {name: '屏幕', value: 'AMOLED 20:9全面屏'}]}]
-            },{
-                title: '拍摄功能', list:[{  id:'113001-6',  arr: [
-                    {
-                        name: '前置摄像头', value: 'FF（定焦）\n' +
-                            '\n' +
-                            '20M 0.8µm 4in1\n' +
-                            '\n' +
-                            '智能美颜 自拍实时美颜\n' +
-                            '\n' +
-                            '4K 视频拍摄 60fps\n' +
-                            '\n' +
-                            '倒计时自拍\n' +
-                            '\n' +
-                            '1080p 视频拍摄 60fps\n' +
-                            '\n' +
-                            '5片式镜头\n' +
-                            '\n' +
-                            '人像模式(portrait photography)\n' +
-                            '\n' +
-                            '慢动作 720P@480fps， 1080P@120fps， 720P@1920fps'
-                    },
-                    {name: '前置摄像头光圈', value: 'f/2.0光圈'},
-                    {name: '后置摄像头', value: '主摄像头64M 0.8µm （64MP 4in1，实际输出16M或64M）'},
-                    {
-                        name: '后置摄像头光圈', value: 'f/1.8大光圈\n' +
-                            '\n' +
-                            '6片式镜头 LED闪光灯\n' +
-                            '\n' +
-                            '支持暗光增强技术 AI相机\n' +
-                            '\n' +
-                            '人像模式 全景模式\n' +
-                            '\n' +
-                            '支持PDAF相位对焦\n' +
-                            '\n' +
-                            'HDR 高动态范围调节技术\n' +
-                            '\n' +
-                            '超级夜景'
-                    },
-                    {name: '副摄像头1', value: '13M 1.0µm（（13MP PDAF f2.2 ，1.0µm）'},
-                    {
-                        name: '副摄像头1光圈', value: 'f/2.2光圈\n' +
-                            '\n' +
-                            '6片式镜头 120°大广角镜头'
-                    },
-                    {name: '副摄像头2', value: '5M 1.12µm（（5MP f2.2 ，1.12µm））'},
-                    {
-                        name: '副摄像头2光圈', value: 'f/2.2光圈\n' +
-                            '\n' +
-                            '3片式镜头 景深镜头'
-                    },
-                ]}]
+                title: '显示屏', id: '113001-5', list: [{
+                    id: '113001-5-1', label: '', arr: [
+                        {id: '113001-5-1-1', name: '屏幕尺寸', value: '6.67英寸'},
+                        {id: '113001-5-1-2', name: '屏幕分辨率', value: '1080*2400分辨率'},
+                        {id: '113001-5-1-3', name: '屏幕刷新率', value: '支持90Hz/120Hz刷新率'},
+                        {id: '113001-5-1-4', name: '屏幕', value: 'AMOLED 20:9全面屏'}]
+                }]
             }, {
-                title: '解锁方式', list:[{  id:'113001-7',  arr: [{name: '指纹识别', value: '屏幕指纹'},
-                    {name: '人脸识别', value: ''},
-                  ]}]
-            } , {
-                title: '数据连接', list:[{  id:'113001-8',  arr: [{name: '数据接口', value: 'USBType-C双面充电接口'},
-                    {name: 'NFC', value: ''},
-                ]}]
-            } , {
-                title: '网络参数', list:[{  id:'113001-9',  arr: [{name: '网络类型', value: '全网通'},
-                    {name: '网络模式', value: '双Nano－SIM卡槽，支持双卡盲插'},
-                ]}]
-            } ],
+                title: '拍摄功能', id: '113001-6', list: [{
+                    id: '113001-6-1', label: '', arr: [
+                        {
+                            id: '113001-6-1-1',
+                            name: '前置摄像头', value: 'FF（定焦）\n' +
+                                '\n' +
+                                '20M 0.8µm 4in1\n' +
+                                '\n' +
+                                '智能美颜 自拍实时美颜\n' +
+                                '\n' +
+                                '4K 视频拍摄 60fps\n' +
+                                '\n' +
+                                '倒计时自拍\n' +
+                                '\n' +
+                                '1080p 视频拍摄 60fps\n' +
+                                '\n' +
+                                '5片式镜头\n' +
+                                '\n' +
+                                '人像模式(portrait photography)\n' +
+                                '\n' +
+                                '慢动作 720P@480fps， 1080P@120fps， 720P@1920fps'
+                        },
+                        {id: '113001-6-1-2', name: '前置摄像头光圈', value: 'f/2.0光圈'},
+                        {id: '113001-6-1-3', name: '后置摄像头', value: '主摄像头64M 0.8µm （64MP 4in1，实际输出16M或64M）'},
+                        {
+                            id: '113001-6-1-4',
+                            name: '后置摄像头光圈', value: 'f/1.8大光圈\n' +
+                                '\n' +
+                                '6片式镜头 LED闪光灯\n' +
+                                '\n' +
+                                '支持暗光增强技术 AI相机\n' +
+                                '\n' +
+                                '人像模式 全景模式\n' +
+                                '\n' +
+                                '支持PDAF相位对焦\n' +
+                                '\n' +
+                                'HDR 高动态范围调节技术\n' +
+                                '\n' +
+                                '超级夜景'
+                        },
+                        {id: '113001-6-1-5', name: '副摄像头1', value: '13M 1.0µm（（13MP PDAF f2.2 ，1.0µm）'},
+                        {
+                            id: '113001-6-1-6', name: '副摄像头1光圈', value: 'f/2.2光圈\n' +
+                                '\n' +
+                                '6片式镜头 120°大广角镜头'
+                        },
+                        {id: '113001-6-1-7', name: '副摄像头2', value: '5M 1.12µm（（5MP f2.2 ，1.12µm））'},
+                        {
+                            id: '113001-6-1-8', name: '副摄像头2光圈', value: 'f/2.2光圈\n' +
+                                '\n' +
+                                '3片式镜头 景深镜头'
+                        },
+                    ]
+                }]
+            }, {
+                title: '解锁方式', id: '113001-7', list: [{
+                    id: '113001-7-1', label: '', arr: [
+                        {id: '113001-7-1-1', name: '指纹识别', value: '屏幕指纹'},
+                        {id: '113001-7-1-2', name: '人脸识别', value: '-'},
+                    ]
+                }]
+            }, {
+                title: '数据连接', id: '113001-8', list: [{
+                    id: '113001-8-1', label: '', arr: [
+                        {id: '113001-8-1-1', name: '数据接口', value: 'USBType-C双面充电接口'},
+                        {id: '113001-8-1-2', name: 'NFC', value: '-'},
+                    ]
+                }]
+            }, {
+                title: '网络参数', id: '113001-9', list: [{
+                    id: '113001-9-1', label: '', arr: [
+                        {id: '113001-9-1-1', name: '网络类型', value: '全网通'},
+                        {id: '113001-9-1-2', name: '网络模式', value: '双Nano－SIM卡槽，支持双卡盲插'},
+                    ]
+                }]
+            }],
 
         },
-        {name: 'Redmi K40 游戏增强版', brand: 'Redmi手机', id: '113002',
-            img:'https://cdn.cnbj1.fds.api.mi-img.com/product-images/redmik40gaming/specs_header.jpg',
-            data: [{
-                title: '速览', list: [
+        {
+            name: 'Redmi K40 游戏增强版', brand: 'Redmi手机', id: '113002',
+            img: 'https://cdn.cnbj1.fds.api.mi-img.com/product-images/redmik40gaming/specs_header.jpg',
+            datas: [{
+                title: '速览', id: '113002-1', list: [
                     {
-                        id:'11',
-                        label: 'CPU型号', img: '', arr: [
-                            {name: '', value: '天玑1200'},
+                        id: '113002-1-1',
+                        label: 'CPU型号', icon: 'mdi-domain', iconfont: 'cpu', arr: [
+                            {id: '113002-1-1-1', name: '', value: '天玑1200'},
                         ]
-                    },{
-                        id:'12',
-                        label: '相机', img: '', arr: [
-                            {name: '前置相机', value: '1600万像素'},
-                            {name: '后置相机', value: '6400万+800万+200万像素'}
+                    }, {
+                        id: '113002-1-2',
+                        label: '相机', icon: 'mdi-domain', iconfont: 'camera', arr: [
+                            {id: '113002-1-2-1', name: '前置相机', value: '1600万像素'},
+                            {id: '113002-1-2-2', name: '后置相机', value: '6400万+800万+200万像素'}
                         ]
-                    },{
-                        id:'13',
-                        label: '屏幕尺寸', img: '', arr: [
-                            {name: '', value: '6.67英寸'},
+                    }, {
+                        id: '113002-1-3',
+                        label: '屏幕尺寸', icon: 'mdi-domain', iconfont: 'screen', arr: [
+                            {id: '113002-1-3-1', name: '屏幕尺寸', value: '6.67英寸'},
                         ]
-                    },{
-                        id:'14',
-                        label: '电池', img: '', arr: [
-                            {name: '电池容量', value: '5065mAh(typ)/4965mAh(min)'},
-                            {name: '充电规格', value: '67W 闪充'}
+                    }, {
+                        id: '113002-1-4',
+                        label: '电池', icon: 'mdi-domain', iconfont: 'battery', arr: [
+                            {id: '113002-1-4-1', name: '电池容量', value: '5065mAh(typ)' + '\n' + '/4965mAh(min)'},
+                            {id: '113002-1-4-2', name: '充电规格', value: '67W 闪充'}
                         ]
-                    },{
-                        id:'15',
-                        label: '解锁方式', img: '', arr: [
-                            {name: '指纹识别', value: '侧面指纹识别'},
-                            {name: '人脸识别', value: '面部识别'}
+                    }, {
+                        id: '113002-1-5',
+                        label: '解锁方式', icon: 'mdi-domain', iconfont: 'lock', arr: [
+                            {id: '113002-1-5-1', name: '指纹识别', value: '侧面指纹识别'},
+                            {id: '113002-1-5-2', name: '人脸识别', value: '面部识别'}
                         ]
-                    },{
-                        id:'16',
-                        label: '生活应用', img: '', arr: [
-                            {name: 'NFC', value: '支持'},
-                            {name: '红外遥控', value: ''}
+                    }, {
+                        id: '113002-1-6',
+                        label: '生活应用', icon: 'mdi-domain', iconfont: 'life', arr: [
+                            {id: '113002-1-6-1', name: 'NFC', value: '支持'},
+                            {id: '113002-1-6-2', name: '红外遥控', value: '-'}
                         ]
-                    },{
-                        id:'17',
-                        label: '其他特色', img: '', arr: [
-                            {name: '操作系统', value: 'JOYUI12操作系统'},
+                    }, {
+                        id: '113002-1-7',
+                        label: '其他特色', icon: 'mdi-domain', iconfont: 'other', arr: [
+                            {id: '113002-1-7-1', name: '操作系统', value: 'JOYUI12操作系统'},
 
                         ]
                     }]
             }, {
-                title: '发布时间', list: [{name: '发布时间', value: '2021年2月25日'}]
+                title: '发布时间', id: '113002-2', list: [{
+                    id: '113002-2-1', label: '', arr: [
+                        {id: '113002-2-1', name: '发布时间', value: '2021年2月25日'}
+                    ]
+                }]
             }, {
-                title: '尺寸和重量', list: [{name: '机身高度', value: '161.94mm'},
-                    {name: '机身宽度', value: '76.93mm'},
-                    {name: '机身厚度', value: '8.3mm'},
-                    {name: '重量', value: '205g'}]
+                title: '尺寸和重量', id: '113002-3', list: [{
+                    id: '113002-3-1', label: '', arr: [
+                        {id: '113002-3-1-1', name: '机身高度', value: '161.94mm'},
+                        {id: '113002-3-1-2', name: '机身宽度', value: '76.93mm'},
+                        {id: '113002-3-1-3', name: '机身厚度', value: '8.3mm'},
+                        {id: '113002-3-1-4', name: '重量', value: '205g'}
+                    ]
+                }]
             }, {
-                title: '处理器', list: [{name: 'CPU型号', value: '骁龙865'},
-                    {name: 'CPU主频', value: '-'}]
+                title: '处理器', id: '113002-4', list: [{
+                    id: '113002-4-1', label: '', arr: [
+                        {id: '113002-4-1-1', name: 'CPU型号', value: '骁龙865'},
+                        {id: '113002-4-1-2', name: 'CPU主频', value: '-'}
+                    ]
+                }]
             }, {
-                title: '电池信息', list: [{name: '电池容量', value: '5065mAh(typ)/4965mAh(min)'},
-                    {name: '快充技术', value: 'USB Type-C 双面充电接口\n' +
-                            '手机支持 QC3+ / PD3.0 快充协议\n' +
-                            '标配 67W 充电器，兼容PD充电协议\n' +
-                            'L 型数据线'}]
+                title: '电池信息', id: '113002-5', list: [{
+                    id: '113002-5-1', label: '', arr: [
+                        {id: '113002-5-1-1', name: '电池容量', value: '5065mAh(typ)' + '\n' + '/4965mAh(min)'},
+                        {
+                            id: '113002-5-1-2', name: '快充技术', value: 'USB Type-C 双面充电接口\n' +
+                                '手机支持 QC3+ / PD3.0 快充协议\n' +
+                                '标配 67W 充电器，兼容PD充电协议\n' +
+                                'L 型数据线'
+                        }
+                    ]
+                }]
             }, {
-                title: '显示屏', list: [{name: '屏幕尺寸', value: '6.67英寸'},
-                    {name: '屏幕分辨率', value: '2400 x 1080（FHD+）'},
-                    {name: '屏幕刷新率', value: '最高 120Hz'},
-                    {name: '屏幕', value: '120Hz OLED 柔性直屏'}]
-            },{
-                title: '拍摄功能', list: [
+                title: '显示屏', id: '113002-6', list: [{
+                    id: '113002-6-1', label: '', arr: [
+                        {id: '113002-6-1-1', name: '屏幕尺寸', value: '6.67英寸'},
+                        {id: '113002-6-1-2', name: '屏幕分辨率', value: '2400 x 1080（FHD+）'},
+                        {id: '113002-6-1-3', name: '屏幕刷新率', value: '最高 120Hz'},
+                        {id: '113002-6-1-4', name: '屏幕', value: '120Hz OLED 柔性直屏'}
+                    ]
+                }]
+            }, {
+                title: '拍摄功能', id: '113002-7', list: [{
+                    id: '113002-7-1', label: '', arr: [
+                        {
+                            id: '113002-7-1-1',
+                            name: '前置摄像头',
+                            value: 'AI水印丨萌拍丨语音快门丨前置夜景丨定时拍照丨电影分辨率丨屏幕补光丨AI 人景分离丨人脸识别 丨动态照片（livephoto）丨AI 美颜丨音量键倒计时拍照丨人像模式丨前置全景丨视频HDR丨前后双景丨延时摄影丨语音转字幕丨视频标签丨录像时拍照丨录像暂停丨录像美颜丨电影滤镜丨视频虚化'
+                        },
+                        {id: '113002-7-1-2', name: '前置摄像头光圈', value: 'f/2.0光圈'},
+                        {
+                            id: '113002-7-1-3',
+                            name: '后置摄像头',
+                            value: '6400万 像素超清主摄：1/2″超大感光元件丨支持 4in1 1.4μm 像素输出丨1G + 5P 玻塑混合镜头'
+                        },
+                        {
+                            id: '113002-7-1-4', name: '后置摄像头光圈', value: 'f/1.65 光圈'
+                        },
+                        {id: '113002-7-1-5', name: '副摄像头1', value: '800万像素120° 超广角镜头'},
+                        {
+                            id: '113002-7-1-6', name: '副摄像头1光圈', value: 'f/2.2 光圈'
+                        },
+                        {id: '113002-7-1-7', name: '副摄像头2', value: '200万像素微距镜头'},
+                        {
+                            id: '113002-7-1-8', name: '副摄像头2光圈', value: 'f/2.4 光圈'
+                        },
+                    ]
+                }]
+            }, {
+                title: '解锁方式', id: '113002-8', list: [{
+                    id: '113002-8-1', label: '', arr: [
+                        {id: '113002-8-1-1', name: '指纹识别', value: '屏幕指纹'},
+                        {id: '113002-8-1-2', name: '人脸识别', value: '-'},
+                    ]
+                }]
+            }, {
+                title: '数据连接', id: '113002-9', list: [{
+                    id: '113002-9-1', label: '', arr: [
+                        {id: '113002-9-1-1', name: '数据接口', value: 'USBType-C双面充电接口'},
+                        {id: '113002-9-1-2', name: 'NFC', value: '支持'},
+                    ]
+                }]
+            }, {
+                title: '网络参数', id: '113002-10', list: [{
+                    id: '113002-10-1', label: '', arr: [
+                        {id: '113002-10-1-1', name: '网络类型', value: '全网通7.0'},
+                        {id: '113002-10-1-2', name: '网络模式', value: '支持双卡不限运营商，主副卡均可采用 5G'},
+                    ]
+                }]
+            }]
+        },
+        {name: '小米 11', brand: '小米手机', id: '113003',
+            img: 'https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1609158754.96998301.jpg',
+            datas: [{
+                title: '速览', id: '113003-1', list: [
                     {
-                        name: '前置摄像头', value: 'AI水印丨萌拍丨语音快门丨前置夜景丨定时拍照丨电影分辨率丨屏幕补光丨AI 人景分离丨人脸识别 丨动态照片（livephoto）丨AI 美颜丨音量键倒计时拍照丨人像模式丨前置全景丨视频HDR丨前后双景丨延时摄影丨语音转字幕丨视频标签丨录像时拍照丨录像暂停丨录像美颜丨电影滤镜丨视频虚化'
-                    },
-                    {name: '前置摄像头光圈', value: 'f/2.0光圈'},
-                    {name: '后置摄像头', value: '6400万 像素超清主摄：1/2″超大感光元件丨支持 4in1 1.4μm 像素输出丨1G + 5P 玻塑混合镜头'},
-                    {
-                        name: '后置摄像头光圈', value: 'f/1.65 光圈'
-                    },
-                    {name: '副摄像头1', value: '800万像素120° 超广角镜头'},
-                    {
-                        name: '副摄像头1光圈', value: 'f/2.2 光圈'
-                    },
-                    {name: '副摄像头2', value: '200万像素微距镜头'},
-                    {
-                        name: '副摄像头2光圈', value: 'f/2.4 光圈'
-                    },
-                ]
+                        id: '113003-1-1',
+                        label: 'CPU型号', icon: 'mdi-domain', iconfont: 'cpu', arr: [
+                            {id: '113003-1-1-1', name: '', value: '高通骁龙™888'},
+                        ]
+                    }, {
+                        id: '113003-1-2',
+                        label: '相机', icon: 'mdi-domain', iconfont: 'camera', arr: [
+                            {id: '113003-1-2-1', name: '前置相机', value: '2000万像素'},
+                            {id: '113003-1-2-2', name: '后置相机', value: '1亿像素超清主摄+123°超广角镜头+500万像素'}
+                        ]
+                    }, {
+                        id: '113003-1-3',
+                        label: '屏幕尺寸', icon: 'mdi-domain', iconfont: 'screen', arr: [
+                            {id: '113003-1-3-1', name: '屏幕尺寸', value: '6.81英寸'},
+                        ]
+                    }, {
+                        id: '113003-1-4',
+                        label: '电池', icon: 'mdi-domain', iconfont: 'battery', arr: [
+                            {id: '113003-1-4-1', name: '电池容量', value: '4600mAh(typ)' + '\n' + '/4500mAh(min)'},
+                            {id: '113003-1-4-2', name: '充电规格', value: '55W 闪充'}
+                        ]
+                    }, {
+                        id: '113003-1-5',
+                        label: '解锁方式', icon: 'mdi-domain', iconfont: 'lock', arr: [
+                            {id: '113003-1-5-1', name: '指纹识别', value: '屏下指纹'},
+                            {id: '113003-1-5-2', name: '人脸识别', value: '-'}
+                        ]
+                    }, {
+                        id: '113003-1-6',
+                        label: '生活应用', icon: 'mdi-domain', iconfont: 'life', arr: [
+                            {id: '113003-1-6-1', name: 'NFC', value: '支持'},
+                            {id: '113003-1-6-2', name: '红外遥控', value: '-'}
+                        ]
+                    }, {
+                        id: '113003-1-7',
+                        label: '其他特色', icon: 'mdi-domain', iconfont: 'other', arr: [
+                            {id: '113003-1-7-1', name: '操作系统', value: 'MIUI 12'},
+
+                        ]
+                    }]
             }, {
-                title: '解锁方式', list: [{name: '指纹识别', value: '屏幕指纹'},
-                    {name: '人脸识别', value: ''},
-                ]
-            } , {
-                title: '数据连接', list: [{name: '数据接口', value: 'USBType-C双面充电接口'},
-                    {name: 'NFC', value: '支持'},
-                ]
-            } , {
-                title: '网络参数', list: [{name: '网络类型', value: '全网通7.0'},
-                    {name: '网络模式', value: '支持双卡不限运营商，主副卡均可采用 5G'},
-                ]
-            } ]},
-        {name: '小米 11', brand: '小米手机', id: '113003'},
-        {name: 'Redmi Note 10 pro', brand: 'Redmi手机', id: '113004'},
-        {name: '华为 Mate 20 PRO', brand: '华为手机', id: '113005'},
+                title: '发布时间', id: '113003-2', list: [{
+                    id: '113003-2-1', label: '', arr: [
+                        {id: '113003-2-1', name: '发布时间', value: '2020年12月28日'}
+                    ]
+                }]
+            }, {
+                title: '尺寸和重量', id: '113003-3', list: [{
+                    id: '113003-3-1', label: '', arr: [
+                        {id: '113003-3-1-1', name: '机身高度', value: '164.3mm'},
+                        {id: '113003-3-1-2', name: '机身宽度', value: '74.6mm'},
+                        {id: '113003-3-1-3', name: '机身厚度', value: '8.06mm'},
+                        {id: '113003-3-1-4', name: '重量', value: '196g'}
+                    ]
+                }]
+            }, {
+                title: '处理器', id: '113003-4', list: [{
+                    id: '113003-4-1', label: '', arr: [
+                        {id: '113003-4-1-1', name: 'CPU型号', value: '骁龙888'},
+                        {id: '113003-4-1-2', name: 'CPU主频', value: '2.84GHz'}
+                    ]
+                }]
+            }, {
+                title: '电池信息', id: '113003-5', list: [{
+                    id: '113003-5-1', label: '', arr: [
+                        {id: '113003-5-1-1', name: '电池容量', value: '4600mAh(typ)' + '\n' + '/4500mAh(min)'},
+                        {
+                            id: '113003-5-1-2', name: '快充技术', value: 'USB Type-C 双面充电接口\n' +
+                                '手机支持QC4+ / QC3+ / PD3.0 快充协议\n' +
+                                '55W 有线闪充 + 50W 无线闪充 + 10W 无线反充'
+
+                        }
+                    ]
+                }]
+            }, {
+                title: '显示屏', id: '113003-6', list: [{
+                    id: '113003-6-1', label: '', arr: [
+                        {id: '113003-6-1-1', name: '屏幕尺寸', value: '6.81英寸'},
+                        {id: '113003-6-1-2', name: '屏幕分辨率', value: '3200 x 1440 WQHD'},
+                        {id: '113003-6-1-3', name: '屏幕刷新率', value: '最高 120Hz'},
+                        {id: '113003-6-1-4', name: '屏幕', value: '2K AMOLED 四曲面柔性屏'}
+                    ]
+                }]
+            }, {
+                title: '拍摄功能', id: '113003-7', list: [{
+                    id: '113003-7-1', label: '', arr: [
+                        {
+                            id: '113003-7-1-1',
+                            name: '前置摄像头',
+                            value: '前置 2000 万超清相机'
+                        },
+                        {id: '113003-7-1-2', name: '前置摄像头光圈', value: 'f/2.0光圈'},
+                        {
+                            id: '113003-7-1-3',
+                            name: '后置摄像头',
+                            value: '后置 1 亿像素三摄'
+                        },
+                        {
+                            id: '113003-7-1-4', name: '后置摄像头光圈', value: 'f/1.85 光圈'
+                        },
+                        {id: '113003-7-1-5', name: '副摄像头1', value: '1300万像素120° 超广角镜头'},
+                        {
+                            id: '113003-7-1-6', name: '副摄像头1光圈', value: 'f/2.4 光圈'
+                        },
+                        {id: '113003-7-1-7', name: '副摄像头2', value: '500 万像素长焦微距镜头'},
+
+                    ]
+                }]
+            }, {
+                title: '解锁方式', id: '113003-8', list: [{
+                    id: '113003-8-1', label: '', arr: [
+                        {id: '113003-8-1-1', name: '指纹识别', value: '屏下指纹'},
+                        {id: '113003-8-1-2', name: '人脸识别', value: '-'},
+                    ]
+                }]
+            }, {
+                title: '数据连接', id: '113003-9', list: [{
+                    id: '113003-9-1', label: '', arr: [
+                        {id: '113003-9-1-1', name: '数据接口', value: 'USBType-C双面充电接口'},
+                        {id: '113003-9-1-2', name: 'NFC', value: '支持'},
+                    ]
+                }]
+            }, {
+                title: '网络参数', id: '113003-10', list: [{
+                    id: '113003-10-1', label: '', arr: [
+                        {id: '113003-10-1-1', name: '网络类型', value: '全网通7.0'},
+                        {id: '113003-10-1-2', name: '网络模式', value: '支持双卡不限运营商，主副卡均可采用 5G'},
+                    ]
+                }]
+            }]},
+        {name: 'Redmi Note 10 pro', brand: 'Redmi手机', id: '113004',
+            img: 'https://cdn.cnbj0.fds.api.mi-img.com/b2c-shopapi-pms/pms_1621955784.84614979.jpg',
+            datas: [{
+                title: '速览', id: '113004-1', list: [
+                    {
+                        id: '113004-1-1',
+                        label: 'CPU型号', icon: 'mdi-domain', iconfont: 'cpu', arr: [
+                            {id: '113004-1-1-1', name: '', value: '天玑1100'},
+                        ]
+                    }, {
+                        id: '113004-1-2',
+                        label: '相机', icon: 'mdi-domain', iconfont: 'camera', arr: [
+                            {id: '113004-1-2-1', name: '前置相机', value: '1600万像素'},
+                            {id: '113004-1-2-2', name: '后置相机', value: '6400万 像素超清主摄+800万超广角镜头+200万像素'}
+                        ]
+                    }, {
+                        id: '113004-1-3',
+                        label: '屏幕尺寸', icon: 'mdi-domain', iconfont: 'screen', arr: [
+                            {id: '113004-1-3-1', name: '屏幕尺寸', value: '6.6英寸'},
+                        ]
+                    }, {
+                        id: '113004-1-4',
+                        label: '电池', icon: 'mdi-domain', iconfont: 'battery', arr: [
+                            {id: '113004-1-4-1', name: '电池容量', value: '5000mAh'},
+                            {id: '113004-1-4-2', name: '充电规格', value: '67W 闪充'}
+                        ]
+                    }, {
+                        id: '113004-1-5',
+                        label: '解锁方式', icon: 'mdi-domain', iconfont: 'lock', arr: [
+                            {id: '113004-1-5-1', name: '指纹识别', value: '屏下指纹'},
+                            {id: '113004-1-5-2', name: '人脸识别', value: '-'}
+                        ]
+                    }, {
+                        id: '113004-1-6',
+                        label: '生活应用', icon: 'mdi-domain', iconfont: 'life', arr: [
+                            {id: '113004-1-6-1', name: 'NFC', value: '支持'},
+                            {id: '113004-1-6-2', name: '红外遥控', value: '-'}
+                        ]
+                    }, {
+                        id: '113004-1-7',
+                        label: '其他特色', icon: 'mdi-domain', iconfont: 'other', arr: [
+                            {id: '113004-1-7-1', name: '操作系统', value: 'MIUI 12'},
+                            {id: '113004-1-7-2', name: '屏幕材质', value: '康宁®大猩猩®玻璃Victus™'},
+
+                        ]
+                    }]
+            }, {
+                title: '发布时间', id: '113004-2', list: [{
+                    id: '113004-2-1', label: '', arr: [
+                        {id: '113004-2-1', name: '发布时间', value: '2021年05月26日'}
+                    ]
+                }]
+            }, {
+                title: '尺寸和重量', id: '113004-3', list: [{
+                    id: '113004-3-1', label: '', arr: [
+                        {id: '113004-3-1-1', name: '机身高度', value: '163.3mm'},
+                        {id: '113004-3-1-2', name: '机身宽度', value: '75.9mm'},
+                        {id: '113004-3-1-3', name: '机身厚度', value: '8.9mm'},
+                        {id: '113004-3-1-4', name: '重量', value: '193g'}
+                    ]
+                }]
+            }, {
+                title: '处理器', id: '113004-4', list: [{
+                    id: '113004-4-1', label: '', arr: [
+                        {id: '113004-4-1-1', name: 'CPU型号', value: '天玑1100'},
+                        {id: '113004-4-1-2', name: 'CPU主频', value: '2.6GHz'}
+                    ]
+                }]
+            }, {
+                title: '电池信息', id: '113004-5', list: [{
+                    id: '113004-5-1', label: '', arr: [
+                        {id: '113004-5-1-1', name: '电池容量', value: '5000mAh'},
+                        {
+                            id: '113004-5-1-2', name: '快充技术', value: 'USB Type-C 双面充电接口\n' +
+                                '标配 67W 充电器，兼容PD/QC充电协议'
+
+
+                        }
+                    ]
+                }]
+            }, {
+                title: '显示屏', id: '113004-6', list: [{
+                    id: '113004-6-1', label: '', arr: [
+                        {id: '113004-6-1-1', name: '屏幕尺寸', value: '6.6英寸'},
+                        {id: '113004-6-1-2', name: '屏幕分辨率', value: '2400 x 1080（FHD+）'},
+                        {id: '113004-6-1-3', name: '屏幕刷新率', value: '最高 120Hz'},
+                        {id: '113004-6-1-4', name: '屏幕', value: 'LCD屏'}
+                    ]
+                }]
+            }, {
+                title: '拍摄功能', id: '113004-7', list: [{
+                    id: '113004-7-1', label: '', arr: [
+                        {
+                            id: '113004-7-1-1',
+                            name: '前置摄像头',
+                            value: '前置 1600 万超清相机'
+                        },
+                        {id: '113004-7-1-2', name: '前置摄像头光圈', value: 'f/2.0光圈'},
+                        {
+                            id: '113004-7-1-3',
+                            name: '后置摄像头',
+                            value: '后置 6400 万像素三摄'
+                        },
+                        {
+                            id: '113004-7-1-4', name: '后置摄像头光圈', value: 'f/1.79 光圈'
+                        },
+                        {id: '113004-7-1-5', name: '副摄像头1', value: '800万像素120° 超广角镜头'},
+                        {
+                            id: '113004-7-1-6', name: '副摄像头1光圈', value: 'f/2.2 光圈'
+                        },
+                        {id: '113004-7-1-7', name: '副摄像头2', value: '200 万像素长焦微距镜头'},
+                        {
+                            id: '113004-7-1-8', name: '副摄像头1光圈', value: 'f/2.4 光圈'
+                        },
+                    ]
+                }]
+            }, {
+                title: '解锁方式', id: '113004-8', list: [{
+                    id: '113004-8-1', label: '', arr: [
+                        {id: '113004-8-1-1', name: '指纹识别', value: '屏下指纹'},
+                        {id: '113004-8-1-2', name: '人脸识别', value: '-'},
+                    ]
+                }]
+            }, {
+                title: '数据连接', id: '113004-9', list: [{
+                    id: '113004-9-1', label: '', arr: [
+                        {id: '113004-9-1-1', name: '数据接口', value: 'USBType-C双面充电接口'},
+                        {id: '113004-9-1-2', name: 'NFC', value: '支持'},
+                    ]
+                }]
+            }, {
+                title: '网络参数', id: '113004-10', list: [{
+                    id: '113004-10-1', label: '', arr: [
+                        {id: '113004-10-1-1', name: '网络类型', value: '全网通7.0'},
+                        {id: '113004-10-1-2', name: '网络模式', value: '支持双卡不限运营商，主副卡均可采用 5G'},
+                    ]
+                }]
+            }]
+        },
+        {name: '华为 Mate 20 PRO', brand: '华为手机', id: '113005',
+            img: 'https://bkimg.cdn.bcebos.com/pic/8435e5dde71190ef76c6c6bade528a16fdfaaf51ca37?x-bce-process=image/resize,m_lfit,w_268,limit_1/format,f_jpg',
+            datas: [{
+                title: '速览', id: '113005-1', list: [
+                    {
+                        id: '113005-1-1',
+                        label: 'CPU型号', icon: 'mdi-domain', iconfont: 'cpu', arr: [
+                            {id: '113005-1-1-1', name: '', value: '海思麒麟980SoC（7nm工艺）'},
+                        ]
+                    }, {
+                        id: '113005-1-2',
+                        label: '相机', icon: 'mdi-domain', iconfont: 'camera', arr: [
+                            {id: '113005-1-2-1', name: '前置相机', value: '1600万像素'},
+                            {id: '113005-1-2-2', name: '后置相机', value: '4000万 像素+2000万像素+800万像素'}
+                        ]
+                    }, {
+                        id: '113005-1-3',
+                        label: '屏幕尺寸', icon: 'mdi-domain', iconfont: 'screen', arr: [
+                            {id: '113005-1-3-1', name: '屏幕尺寸', value: '6.39英寸'},
+                        ]
+                    }, {
+                        id: '113005-1-4',
+                        label: '电池', icon: 'mdi-domain', iconfont: 'battery', arr: [
+                            {id: '113005-1-4-1', name: '电池容量', value: '4200mAh'},
+                            {id: '113005-1-4-2', name: '充电规格', value: '67W 闪充'}
+                        ]
+                    }, {
+                        id: '113005-1-5',
+                        label: '解锁方式', icon: 'mdi-domain', iconfont: 'lock', arr: [
+                            {id: '113005-1-5-1', name: '指纹识别', value: '支持'},
+                            {id: '113005-1-5-2', name: '人脸识别', value: '-'}
+                        ]
+                    }, {
+                        id: '113005-1-6',
+                        label: '生活应用', icon: 'mdi-domain', iconfont: 'life', arr: [
+                            {id: '113005-1-6-1', name: 'NFC', value: '支持'},
+                            {id: '113005-1-6-2', name: '红外遥控', value: '-'}
+                        ]
+                    }, {
+                        id: '113005-1-7',
+                        label: '其他特色', icon: 'mdi-domain', iconfont: 'other', arr: [
+                            {id: '113005-1-7-1', name: '操作系统', value: 'EMUI 9.0 (基于 Android 9)'},
+
+
+                        ]
+                    }]
+            }, {
+                title: '发布时间', id: '113005-2', list: [{
+                    id: '113005-2-1', label: '', arr: [
+                        {id: '113005-2-1', name: '发布时间', value: '2018年10月16日'}
+                    ]
+                }]
+            }, {
+                title: '尺寸和重量', id: '113005-3', list: [{
+                    id: '113005-3-1', label: '', arr: [
+                        {id: '113005-3-1-1', name: '机身高度', value: '157.8mm'},
+                        {id: '113005-3-1-2', name: '机身宽度', value: '72.3mm'},
+                        {id: '113005-3-1-3', name: '机身厚度', value: '8.6mm'},
+                        {id: '113005-3-1-4', name: '重量', value: '189g'}
+                    ]
+                }]
+            }, {
+                title: '处理器', id: '113005-4', list: [{
+                    id: '113005-4-1', label: '', arr: [
+                        {id: '113005-4-1-1', name: 'CPU型号', value: '海思麒麟980SoC（7nm工艺）'},
+                        {id: '113005-4-1-2', name: 'CPU主频', value: '2.6GHz'}
+                    ]
+                }]
+            }, {
+                title: '电池信息', id: '113005-5', list: [{
+                    id: '113005-5-1', label: '', arr: [
+                        {id: '113005-5-1-1', name: '电池容量', value: '4200mAh'},
+                        {
+                            id: '113005-5-1-2', name: '快充技术', value: 'USB Type-C 双面充电接口\n' +
+                                '40W有线超级快充与15W无线快充'
+
+
+                        }
+                    ]
+                }]
+            }, {
+                title: '显示屏', id: '113005-6', list: [{
+                    id: '113005-6-1', label: '', arr: [
+                        {id: '113005-6-1-1', name: '屏幕尺寸', value: '6.39英寸'},
+                        {id: '113005-6-1-2', name: '屏幕分辨率', value: '3120×1440'},
+                        {id: '113005-6-1-3', name: '屏幕刷新率', value: '最高 120Hz'},
+                        {id: '113005-6-1-4', name: '屏幕', value: '曲面OLED刘海全面屏'}
+                    ]
+                }]
+            }, {
+                title: '拍摄功能', id: '113005-7', list: [{
+                    id: '113005-7-1', label: '', arr: [
+                        {
+                            id: '113005-7-1-1',
+                            name: '前置摄像头',
+                            value: '前置 1600 万超清相机'
+                        },
+                        {id: '113005-7-1-2', name: '前置摄像头光圈', value: 'f/2.0光圈'},
+                        {
+                            id: '113005-7-1-3',
+                            name: '后置摄像头',
+                            value: '后置 6400 万像素三摄'
+                        },
+                        {
+                            id: '113005-7-1-4', name: '后置摄像头光圈', value: 'f/1.8 光圈'
+                        },
+                        {id: '113005-7-1-5', name: '副摄像头1', value: '2000万像素120° 超广角镜头'},
+                        {
+                            id: '113005-7-1-6', name: '副摄像头1光圈', value: 'f/2.2 光圈'
+                        },
+                        {id: '113005-7-1-7', name: '副摄像头2', value: '800 万像素长焦微距镜头'},
+                        {
+                            id: '113005-7-1-8', name: '副摄像头1光圈', value: 'f/2.2 光圈'
+                        },
+                    ]
+                }]
+            }, {
+                title: '解锁方式', id: '113005-8', list: [{
+                    id: '113005-8-1', label: '', arr: [
+                        {id: '113005-8-1-1', name: '指纹识别', value: '屏下指纹'},
+                        {id: '113005-8-1-2', name: '人脸识别', value: '-'},
+                    ]
+                }]
+            }, {
+                title: '数据连接', id: '113005-9', list: [{
+                    id: '113005-9-1', label: '', arr: [
+                        {id: '113005-9-1-1', name: '数据接口', value: 'USBType-C双面充电接口'},
+                        {id: '113005-9-1-2', name: 'NFC', value: '支持'},
+                    ]
+                }]
+            }, {
+                title: '网络参数', id: '113005-10', list: [{
+                    id: '113005-10-1', label: '', arr: [
+                        {id: '113005-10-1-1', name: '网络类型', value: '全网通7.0'},
+                        {id: '113005-10-1-2', name: '网络模式', value: '支持双卡不限运营商，主副卡均可采用 5G'},
+                    ]
+                }]
+            }]},
         {name: 'realme 真我Q3', brand: 'realme手机', id: '113006'},
         {name: 'realme 真我Q2 Pro', brand: 'realme手机', id: '113007'},
         {name: 'OPPO Reno6 5G', brand: 'OPPO手机', id: '113008'},
@@ -242,5 +724,14 @@ export default {
         {name: '75%'},
         {name: '50%'},
         {name: '25%'},
-        {name: '0%'},]
+        {name: '0%'},],
+    svg: {
+        cpu: '<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1688"><path d="M652.245333 699.733333H371.754667a46.122667 46.122667 0 0 1-47.018667-46.933333V372.778667c0-26.624 20.352-46.933333 47.018667-46.933334h280.490666c26.624 0 47.018667 20.309333 47.018667 46.933334V652.8c0 25.045333-20.352 46.933333-47.018667 46.933333z m-233.472-93.866666h186.453334V419.712h-186.453334V605.866667zM865.365333 912.512H158.634667a46.122667 46.122667 0 0 1-47.018667-46.933333V160c0-26.581333 20.352-46.933333 47.018667-46.933333h706.730666c26.666667 0 47.018667 20.352 47.018667 46.933333v705.578667c0 25.002667-20.352 46.933333-47.018667 46.933333z m-659.712-93.866667h612.693334V206.933333H205.653333v611.712zM373.333333 981.333333a45.44 45.44 0 0 1-45.44-45.354666V868.693333a45.44 45.44 0 0 1 90.88 0v67.285334c0 25.002667-20.394667 45.354667-45.44 45.354666zM652.245333 981.333333a45.44 45.44 0 0 1-45.44-45.354666V868.693333a45.44 45.44 0 0 1 90.88 0v67.285334c0 25.002667-20.352 45.354667-45.44 45.354666zM373.333333 199.125333a45.44 45.44 0 0 1-45.44-45.397333v-65.706667a45.44 45.44 0 0 1 90.88 0V155.306667c0 23.466667-20.394667 43.818667-45.44 43.818666zM652.245333 199.125333a45.44 45.44 0 0 1-45.44-45.397333v-65.706667a45.44 45.44 0 0 1 90.88 0V155.306667c0 23.466667-20.352 43.818667-45.44 43.818666zM935.893333 419.712h-67.413333a45.44 45.44 0 0 1-45.397333-45.397333c0-25.002667 20.352-45.354667 45.44-45.354667h67.370666c25.088 0 45.44 20.352 45.44 45.354667 0 25.045333-20.352 45.397333-45.44 45.397333zM935.893333 693.461333h-67.413333a45.44 45.44 0 0 1-45.397333-45.354666c0-25.045333 20.352-45.354667 45.44-45.354667h67.370666c25.088 0 45.44 20.309333 45.44 45.354667s-20.352 45.354667-45.44 45.354666zM153.941333 419.712H88.106667A45.44 45.44 0 0 1 42.666667 374.314667c0-25.002667 20.352-45.354667 45.44-45.354667h67.413333c25.045333 0 45.44 20.352 45.44 45.354667 0 25.045333-21.973333 45.397333-47.018667 45.397333zM153.941333 693.461333H88.106667A45.44 45.44 0 0 1 42.666667 648.106667c0-25.045333 20.352-45.354667 45.44-45.354667h67.413333c25.045333 0 45.44 20.309333 45.44 45.354667s-21.973333 45.354667-47.018667 45.354666z" p-id="1689"></path></svg>',
+        camera: '<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3202"><path d="M837.818182 0H186.181818C83.781818 0 0 83.781818 0 186.181818v651.636364c0 102.4 83.781818 186.181818 186.181818 186.181818h651.636364c102.4 0 186.181818-83.781818 186.181818-186.181818V186.181818c0-102.4-83.781818-186.181818-186.181818-186.181818z m93.090909 837.818182c0 51.2-41.890909 93.090909-93.090909 93.090909H186.181818c-51.2 0-93.090909-41.890909-93.090909-93.090909V186.181818c0-51.2 41.890909-93.090909 93.090909-93.090909h651.636364c51.2 0 93.090909 41.890909 93.090909 93.090909v651.636364z" fill="#2D3548" p-id="3203"></path><path d="M512 302.545455c-116.363636 0-209.454545 93.090909-209.454545 209.454545s93.090909 209.454545 209.454545 209.454545 209.454545-93.090909 209.454545-209.454545-93.090909-209.454545-209.454545-209.454545z m0 325.818181c-65.163636 0-116.363636-51.2-116.363636-116.363636s51.2-116.363636 116.363636-116.363636 116.363636 51.2 116.363636 116.363636-51.2 116.363636-116.363636 116.363636z" fill="#2D3548" p-id="3204"></path><path d="M768 256m-69.818182 0a69.818182 69.818182 0 1 0 139.636364 0 69.818182 69.818182 0 1 0-139.636364 0Z" fill="#2D3548" p-id="3205"></path></svg>',
+        screen: '<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4015"><path d="M853.333333 955.733333H170.666667c-66.030933 0-102.4-36.369067-102.4-102.4V170.666667c0-66.030933 36.369067-102.4 102.4-102.4h682.666666c66.030933 0 102.4 36.369067 102.4 102.4v682.666666c0 66.030933-36.369067 102.4-102.4 102.4zM170.666667 102.4c-47.223467 0-68.266667 21.0432-68.266667 68.266667v682.666666c0 47.223467 21.0432 68.266667 68.266667 68.266667h682.666666c47.223467 0 68.266667-21.0432 68.266667-68.266667V170.666667c0-47.223467-21.0432-68.266667-68.266667-68.266667H170.666667z m682.666666 768H680.96a17.066667 17.066667 0 1 1 0-34.133333H836.266667v-153.6a17.066667 17.066667 0 1 1 34.133333 0v170.666666a17.066667 17.066667 0 0 1-17.066667 17.066667z m-511.146666 0H170.666667a17.066667 17.066667 0 0 1-17.066667-17.066667V682.666667a17.066667 17.066667 0 1 1 34.133333 0v153.6h154.453334a17.066667 17.066667 0 1 1 0 34.133333zM853.333333 357.546667a17.066667 17.066667 0 0 1-17.066666-17.066667V187.733333h-155.306667a17.066667 17.066667 0 1 1 0-34.133333H853.333333a17.066667 17.066667 0 0 1 17.066667 17.066667v169.813333a17.066667 17.066667 0 0 1-17.066667 17.066667z m-682.666666-1.706667a17.066667 17.066667 0 0 1-17.066667-17.066667V170.666667a17.066667 17.066667 0 0 1 17.066667-17.066667h171.52a17.066667 17.066667 0 0 1 0 34.133333H187.733333v151.04a17.066667 17.066667 0 0 1-17.066666 17.066667z" p-id="4016"></path></svg>',
+        battery: '<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="11260"><path d="M853.32992 409.6v-68.27008c0-37.5296-30.73024-68.25984-68.25984-68.25984H504.33024l-68.25984 204.8h110.05952l-91.00288 273.05984h329.94304c37.5296 0 68.25984-30.73024 68.25984-68.25984V614.4L921.6 580.27008V443.72992L853.32992 409.6zM341.32992 546.12992l91.00288-273.05984H170.67008c-37.53984 0-68.27008 30.73024-68.27008 68.25984v341.34016c0 37.5296 30.73024 68.25984 68.27008 68.25984h212.45952l68.27008-204.8H341.32992z m-68.25984 102.4H204.8V375.47008h68.27008v273.05984z" p-id="11261"></path></svg>',
+        lock: '<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10611"><path d="M489.82203 911.176489c-11.261732-4.095175-21.49967 0-26.618639 12.285526l-27.642433 67.570391c-6.142763 13.30932 4.095175 27.642433 15.356907 27.642433 12.285526 0 18.428289-4.095175 22.523464-13.30932 10.237938-21.49967 19.452082-44.023134 27.642433-66.546597 4.095175-12.285526-1.023794-23.547258-11.261732-27.642433z m464.802389-252.877071c-1.023794-12.285526-10.237938-20.475876-22.523464-19.452082-11.261732 1.023794-18.428289 9.214144-18.428288 21.49967 1.023794 33.785196-1.023794 66.546598-2.047588 100.331793 0 15.356907 7.166557 23.547258 19.452082 24.571052 12.285526 0 21.49967-8.19035 21.49967-23.547258 0-22.523464 3.071381-46.070721 2.047588-67.570391 1.023794-14.333113 1.023794-24.571051 0-35.832784z m-685.941851 128.99802c-11.261732-3.071381-21.49967 3.071381-25.594846 14.333114-2.047588 5.118969-3.071381 11.261732-5.118969 16.380701-9.214144 27.642433-20.475876 53.237278-32.761401 78.832123-7.166557 15.356907 1.023794 30.713814 17.404494 30.713814 9.214144 1.023794 15.356907-5.118969 19.452083-13.30932 16.380701-32.761402 30.713814-66.546598 39.927958-101.355587 3.071381-11.261732-2.047588-22.523464-13.309319-25.594845z m338.87575-47.094515c-11.261732-1.023794-20.475876 6.142763-22.523464 18.428289-7.166557 51.18969-17.404495 101.355587-31.737608 150.497689-8.19035 28.666227-18.428289 57.332453-28.666226 85.99868-4.095175 10.237938-1.023794 20.475876 8.19035 25.594846s17.404495 4.095175 24.571051-2.047588c4.095175-4.095175 6.142763-9.214144 8.190351-15.356907 12.285526-32.761402 23.547258-64.49901 31.737608-98.284206 12.285526-46.070721 22.523464-93.165237 28.666227-142.307339 0-11.261732-7.166557-21.49967-18.428289-22.523464z m-547.729687-358.327833c4.095175-13.30932-2.047588-24.571051-14.333113-28.666226-11.261732-3.071381-21.49967 4.095175-25.594846 16.380701C6.591353 416.68408 0.44859 463.778595 0.44859 514.968285c0 14.333113 0 32.761402 2.047588 50.165897 4.095175 36.856577 11.261732 72.68936 23.547257 108.522144 3.071381 8.19035 8.19035 13.30932 17.404495 13.309319 17.404495 1.023794 25.594845-12.285526 20.475876-30.713814-28.666227-91.117649-30.713814-182.235298-4.095175-274.376741z m488.349646 288.709854c1.023794-19.452082-1.023794-41.975546-3.071381-65.522804-3.071381-32.761402-7.166557-64.49901-14.333114-96.236617-3.071381-12.285526-13.30932-18.428289-23.547257-16.380701-12.285526 3.071381-18.428289 13.30932-15.356907 25.594845 8.19035 38.904165 13.30932 78.832123 15.356907 119.783875 3.071381 69.617979-2.047588 139.235958-19.452082 206.80635-3.071381 13.30932 2.047588 24.571051 13.309319 27.642432 12.285526 3.071381 22.523464-4.095175 26.618639-18.428288 14.333113-59.380041 21.49967-118.760082 20.475876-183.259092z m214.9967-242.639132c-4.095175-11.261732-14.333113-16.380701-25.594845-13.30932-11.261732 3.071381-16.380701 13.30932-13.30932 25.594845 16.380701 61.427628 22.523464 124.902845 26.618639 189.401855 5.118969 105.450762-6.142763 207.830143-32.761402 310.209524-3.071381 13.30932 2.047588 25.594845 13.30932 27.642432 13.30932 3.071381 23.547258-3.071381 26.618639-17.404494 22.523464-88.046267 35.832783-178.140123 34.808989-272.329153 1.023794-57.332453-4.095175-117.736288-13.309319-177.116329-4.095175-25.594845-8.19035-50.165897-16.380701-72.68936zM89.518651 304.066761c19.452082-39.927959 45.046928-76.784536 75.760742-109.545937C256.397042 97.260412 367.990567 46.070721 502.107556 41.975546c15.356907 0 24.571051-8.19035 24.571051-21.49967s-9.214144-20.475876-25.594845-20.475876c-83.951092 2.047588-163.807009 22.523464-237.520163 63.475216-92.141443 51.18969-161.759422 124.902845-209.877731 219.091875-2.047588 5.118969-4.095175 9.214144-4.095175 14.333113-1.023794 8.19035 3.071381 14.333113 10.237938 18.428289 11.261732 6.142763 23.547258 2.047588 29.69002-11.261732z m282.567091 245.710514c-8.19035-49.142103-2.047588-93.165237 31.737608-132.069401 2.047588-3.071381 4.095175-6.142763 4.095176-9.214145 1.023794-10.237938-1.023794-18.428289-11.261732-22.523463-10.237938-5.118969-18.428289-2.047588-25.594846 6.142762-36.856577 42.99934-50.165897 93.165237-41.975546 149.473896 7.166557 44.023134 11.261732 87.022474 12.285526 128.99802 0 44.023134-3.071381 85.99868-12.285526 125.926639-10.237938 49.142103-28.666227 95.212824-51.18969 140.259751-3.071381 5.118969-6.142763 11.261732-5.118969 17.404495 2.047588 9.214144 6.142763 15.356907 15.356907 17.404495 11.261732 2.047588 18.428289-2.047588 24.571051-12.285526 31.737608-61.427628 54.261072-125.926638 63.475216-195.544617 9.214144-71.665567 8.19035-143.331133-4.095175-213.972906zM133.541785 607.109728c-7.166557-46.070721-13.30932-91.117649-7.166557-138.212164 6.142763-58.356247 25.594845-112.617319 56.30866-162.783215 27.642433-45.046928 63.475216-81.903505 106.474556-112.617319 10.237938-7.166557 13.30932-16.380701 10.237938-25.594845-5.118969-14.333113-19.452082-17.404495-33.785196-8.190351-32.761402 22.523464-61.427628 49.142103-85.99868 79.855917-61.427628 75.760742-93.165237 162.783215-96.236618 261.067421-2.047588 50.165897 11.261732 99.307999 14.333114 148.450102 2.047588 32.761402 3.071381 65.522804-7.166557 98.284206-3.071381 10.237938-6.142763 21.49967-9.214144 29.69002 0 13.30932 8.19035 22.523464 20.475876 22.523464s17.404495-7.166557 21.49967-17.404495c21.49967-56.308659 18.428289-115.6887 10.237938-175.068741z m881.486469-180.18771C974.076501 222.163256 854.292626 87.022474 655.676627 21.49967 634.176957 14.333113 611.653493 9.214144 588.106236 7.166557c-12.285526-1.023794-20.475876 5.118969-21.49967 16.380701-2.047588 12.285526 4.095175 21.49967 16.380701 23.547257 4.095175 1.023794 8.19035 1.023794 11.261732 2.047588 104.426968 19.452082 192.473236 68.594185 264.138802 147.426308 39.927959 44.023134 70.641773 93.165237 91.117649 148.450102 18.428289 49.142103 28.666227 100.331793 30.713814 152.545278 1.023794 15.356907 12.285526 24.571051 26.618639 20.475876 10.237938-3.071381 15.356907-11.261732 14.333113-27.642433 0-20.475876-1.023794-41.975546-6.142762-63.475216zM744.746688 254.924658c-20.475876-18.428289-41.975546-34.808989-66.546597-47.094515-11.261732-6.142763-22.523464-2.047588-27.642433 7.166557-6.142763 10.237938-3.071381 21.49967 8.19035 28.666226 2.047588 2.047588 5.118969 3.071381 7.166557 4.095176 68.594185 41.975546 116.712494 100.331793 139.235958 178.140122 20.475876 74.736948 25.594845 151.521484 27.642433 228.306019 2.047588 72.68936-3.071381 145.378721-15.356907 217.044288-2.047588 15.356907 4.095175 24.571051 16.380701 26.618639 13.30932 2.047588 22.523464-5.118969 24.571051-20.475877 10.237938-63.475216 16.380701-127.974226 15.356907-183.259091 0-82.927298-6.142763-155.616659-17.404495-227.282226-13.30932-83.951092-49.142103-154.592865-111.593525-211.925318zM574.796916 338.87575c-40.951752-15.356907-81.903505-14.333113-123.879051-1.023793-17.404495 5.118969-22.523464 23.547258-11.261731 34.808989 8.19035 8.19035 16.380701 7.166557 25.594845 4.095175C550.225865 349.113689 635.200751 400.303379 651.581452 487.325853c7.166557 37.880371 12.285526 75.760742 15.356907 113.641112 5.118969 55.284866 4.095175 111.593525-1.023794 166.878391-7.166557 71.665567-23.547258 141.283545-46.070721 209.877731-1.023794 4.095175-3.071381 7.166557-2.047588 11.261731 2.047588 9.214144 7.166557 16.380701 18.428289 17.404495 11.261732 1.023794 18.428289-4.095175 22.523463-15.356907 34.808989-101.355587 53.237278-204.758762 53.237278-308.161936 0-67.570391-6.142763-131.045607-17.404494-194.520824-13.30932-72.68936-52.213484-123.879051-119.783876-149.473896zM291.206031 463.778595C314.753289 348.089895 436.584752 267.210184 553.297246 290.757441c53.237278 11.261732 97.260412 36.856577 132.069401 77.80833 3.071381 4.095175 7.166557 8.19035 11.261732 11.261732 8.19035 4.095175 18.428289 1.023794 24.571052-6.142763 7.166557-9.214144 6.142763-18.428289-2.047588-29.690021-47.094515-57.332453-107.49835-91.117649-182.235298-97.260411-95.212824-8.19035-174.044947 25.594845-234.448782 100.331793-47.094515 58.356247-64.49901 126.950432-54.261072 200.663586 5.118969 34.808989 11.261732 68.594185 11.261732 103.403175 0 24.571051 0 49.142103-2.047587 72.68936-1.023794 11.261732 7.166557 20.475876 18.428288 21.49967 11.261732 1.023794 21.49967-6.142763 22.523464-17.404495 4.095175-45.046928 4.095175-90.093855-1.023794-135.140782-3.071381-27.642433-12.285526-54.261072-10.237938-79.855917 0-17.404495 1.023794-32.761402 4.095175-49.142103z m639.87113 134.116989c11.261732 0 19.452082-10.237938 19.452083-22.523464v-7.166557c-4.095175-38.904165-8.19035-77.808329-14.333114-116.712494-13.30932-85.99868-47.094515-161.759422-105.450762-225.234637-84.974886-95.212824-192.473236-142.307339-320.447462-143.331134-57.332453 0-112.617319 11.261732-165.854597 33.785196-12.285526 5.118969-17.404495 16.380701-13.309319 27.642433 5.118969 11.261732 16.380701 15.356907 28.666227 10.237938 60.403835-24.571051 122.855257-34.808989 187.354266-28.666227 89.070061 8.19035 164.830803 44.023134 229.329813 104.426969 67.570391 64.49901 106.474556 143.331133 119.783876 236.496369 5.118969 36.856577 9.214144 73.713154 12.285526 110.569732 3.071381 12.285526 11.261732 20.475876 22.523463 20.475876z m-478.111708-66.546598c-2.047588-12.285526-4.095175-24.571051 0-36.856577 8.19035-27.642433 32.761402-45.046928 63.475216-42.99934 27.642433 1.023794 50.165897 21.49967 56.30866 52.213485 11.261732 57.332453 16.380701 115.6887 17.404494 174.044947 0 13.30932 8.19035 22.523464 20.475877 22.523464s19.452082-9.214144 20.475876-21.49967v-18.428289h1.023793c-2.047588-26.618639-3.071381-53.237278-6.142762-79.855917-3.071381-26.618639-7.166557-53.237278-11.261732-79.855917-8.19035-56.308659-57.332453-96.236618-115.688701-90.093855-53.237278 6.142763-96.236618 59.380041-88.046267 111.593525 4.095175 31.737608 9.214144 63.475216 12.285526 95.212824 6.142763 89.070061-2.047588 176.092535-30.713815 261.067421-11.261732 31.737608-23.547258 62.451422-38.904164 92.141443-4.095175 7.166557-4.095175 15.356907 1.023794 22.523464 5.118969 7.166557 11.261732 9.214144 19.452082 8.19035 9.214144-1.023794 14.333113-7.166557 18.428288-15.356907 70.641773-144.354927 87.022474-295.87641 60.403835-454.564451z m-240.591545 56.30866c-5.118969-34.808989-10.237938-70.641773-7.166556-105.450762 9.214144-82.927298 45.046928-151.521484 108.522143-204.758762 53.237278-45.046928 114.664906-67.570391 184.282886-70.641773 28.666227-1.023794 56.308659 1.023794 83.951092 8.190351 4.095175 1.023794 8.19035 2.047588 12.285526 1.023793 10.237938-2.047588 15.356907-8.19035 16.380701-18.428288 1.023794-10.237938-5.118969-18.428289-15.356908-21.49967-27.642433-7.166557-56.308659-11.261732-85.998679-10.237938-20.475876-1.023794-41.975546 1.023794-63.475217 6.142763-103.403175 19.452082-182.235298 75.760742-236.496369 166.87839-38.904165 66.546598-52.213484 138.212164-42.99934 213.972906 3.071381 28.666227 9.214144 56.308659 11.261732 84.974886 4.095175 70.641773-5.118969 139.235958-36.856577 202.711174-2.047588 4.095175-4.095175 8.19035-3.071382 13.30932 2.047588 10.237938 7.166557 16.380701 17.404495 17.404495 10.237938 1.023794 17.404495-4.095175 22.523464-13.30932 42.99934-84.974886 49.142103-177.116329 34.808989-270.281565z" p-id="10612"></path></svg>',
+        life: '<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7819"><path d="M887.296 301.056c0-6.656-3.584-13.312-9.728-16.384l-356.352-201.728c-5.632-3.072-12.8-3.072-18.432 0L146.432 284.16c-6.144 3.584-9.728 9.728-9.728 16.384 0 6.656 3.584 13.312 9.728 16.384l356.352 199.168c3.072 1.536 6.144 2.56 9.216 2.56 3.072 0 6.144-0.512 9.216-2.56l356.352-199.168c6.144-3.072 9.728-9.216 9.728-15.872zM512 452.608L229.888 300.544 512 146.432l277.504 154.112L512 452.608z m-47.616 117.76l-318.976-168.96c-5.632-3.072-12.8-3.072-18.432 0.512S117.76 411.648 117.76 417.792V737.28c0 6.656 3.584 12.8 9.216 16.384l318.976 187.392c3.072 1.536 6.144 2.56 9.728 2.56 3.072 0 6.656-1.024 9.216-2.56 5.632-3.584 9.216-9.728 9.216-16.384v-337.92c0.512-6.656-3.584-12.8-9.728-16.384z m-52.736 275.456l-230.4-129.536V485.376l230.4 123.392v237.056zM559.616 570.368c-6.144 3.072-10.24 9.728-10.24 16.384v337.92c0 6.656 3.584 12.8 9.216 16.384 3.072 1.536 6.144 2.56 9.216 2.56 3.072 0 6.656-1.024 9.728-2.56l318.976-187.392c5.632-3.584 9.216-9.728 9.216-16.384V418.304c0-6.656-3.584-12.8-9.216-15.872s-12.8-3.584-18.432-0.512l-318.464 168.448z m52.736 38.4l230.4-123.392v230.912l-230.4 129.536v-237.056z" p-id="7820"></path></svg>',
+        other: '<svg class="icon" style="width: 1em;height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15897"><path d="M490.38 491.71h-195.8c-107.96 0-195.8-87.84-195.8-195.8 0-107.95 87.84-195.79 195.8-195.79s195.8 87.84 195.8 195.79v195.8z m-195.8-337.09c-77.91 0-141.29 63.38-141.29 141.29s63.39 141.3 141.29 141.3h141.29v-141.3c0-77.91-63.38-141.29-141.29-141.29zM729.42 491.71h-195.8v-195.8c0-107.95 87.84-195.79 195.8-195.79s195.8 87.84 195.8 195.79c0 107.97-87.84 195.8-195.8 195.8z m-141.29-54.5h141.29c77.91 0 141.29-63.39 141.29-141.3s-63.39-141.29-141.29-141.29S588.13 218 588.13 295.91v141.3zM294.58 923.88c-107.96 0-195.8-87.84-195.8-195.79s87.84-195.79 195.8-195.79h195.8v195.79c0 107.95-87.84 195.79-195.8 195.79z m0-337.08c-77.91 0-141.29 63.38-141.29 141.29s63.39 141.29 141.29 141.29S435.87 806 435.87 728.09V586.8H294.58zM729.42 923.88c-107.96 0-195.8-87.84-195.8-195.79V532.3h195.8c107.96 0 195.8 87.84 195.8 195.79s-87.84 195.79-195.8 195.79zM588.13 586.8v141.29c0 77.91 63.39 141.29 141.29 141.29S870.71 806 870.71 728.09 807.33 586.8 729.42 586.8H588.13z" p-id="15898"></path></svg>'
+    }
 }

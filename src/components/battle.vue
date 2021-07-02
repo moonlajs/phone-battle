@@ -270,20 +270,152 @@
                                     :focused="showDropDownTwo"></z-phone-button>
                 </v-col>
             </v-row>
-            <zDropDown v-if="showDropDownOne || showDropDownTwo" :items="allPhoneItems" @toggle="toggleDropDown"></zDropDown>
 
-            <v-row class="ch-row-content">
-                <v-col cols="6">
-                    <z-content :item="itemOne" :left="true"></z-content>
-                </v-col>
-                <v-col cols="6">
-                    <z-content :item="itemTwo"></z-content>
-                </v-col>
-            </v-row>
+
+            <div class="ch-row-content">
+                <v-row>
+                    <!--                <v-col cols="6">-->
+                    <!--                    <z-content :item="itemOne" :left="true"></z-content>-->
+                    <!--                </v-col>-->
+                    <!--                <v-col cols="6">-->
+                    <!--                    <z-content :item="itemTwo"></z-content>-->
+                    <!--                </v-col>-->
+
+                    <v-col cols="6">
+                        <v-img
+                                :aspect-ratio="16/9"
+                                height="125"
+                                contain
+                                :src="itemOne.img"
+                        ></v-img>
+                    </v-col>
+                    <v-col cols="6">
+                        <v-img
+                                :aspect-ratio="16/9"
+                                height="125"
+                                contain
+                                :src="itemTwo.img"
+                        ></v-img>
+                    </v-col>
+                </v-row>
+
+                <v-row v-for="data in itemOne.datas" :key="data.id">
+                    <v-banner class='ch-banner'>
+                        <div class="transition-swing text-h5" v-text="data.title"></div>
+                    </v-banner>
+                    <v-col cols="6">
+                        <div class="transition-swing">
+                            <div v-for="listItem in data.listOne"
+                                 :key="listItem.id"
+                                 class="transition-swing">
+                                <v-row no-gutters>
+                                    <v-col cols="4" class="text-h6 d-flex justify-center mb-6">
+                                        <template>
+                                            <span v-html="svg[listItem.iconfont]"></span>
+                                        </template>
+                                    </v-col>
+                                    <v-col cols="20">
+                                        <div class="transition-swing  text-h6 d-flex justify-start mb-6"
+                                             v-text="listItem.label">
+
+                                        </div>
+                                        <div v-for="arrItem in listItem.arr"
+                                             :key="arrItem.id"
+                                             class="transition-swing"
+
+                                        >
+                                            <div class="transition-swing  text-body-1 d-flex justify-start mb-6"
+                                                 v-text="arrItem.name"></div>
+                                            <div class="transition-swing  text-caption d-flex justify-start mb-6"
+                                                 v-text="arrItem.value"></div>
+                                        </div>
+                                    </v-col>
+                                </v-row>
+
+
+                            </div>
+
+                        </div>
+                    </v-col>
+                    <v-col cols="6">
+                        <div  class="transition-swing" >
+                            <div v-for="listItem in data.listTwo"
+                                    :key="listItem.id"
+                                    class="transition-swing"
+
+                            >
+                                <v-row
+                                        no-gutters
+
+                                >
+                                    <v-col
+                                            cols="4"
+
+                                            class="text-h6 d-flex justify-center mb-6"
+                                    >
+                                        <template>
+                                            <span v-html="svg[listItem.iconfont]"></span>
+                                        </template>
+                                    </v-col>
+                                    <v-col
+                                            cols="20"
+
+                                    >
+                                        <div
+
+                                                class="transition-swing  text-h6 d-flex justify-start mb-6"
+                                                v-text="listItem.label"
+                                        >
+
+
+                                        </div>
+                                        <div
+                                                v-for="arrItem in listItem.arr"
+                                                :key="arrItem.id"
+                                                class="transition-swing"
+
+                                        >
+                                            <div
+                                                    class="transition-swing  text-body-1 d-flex justify-start mb-6"
+                                                    v-text="arrItem.name"
+                                            >
+                                                <!--                                    <p class="font-weight-medium"  v-text="arrItem.name">-->
+                                                <!--                                        Medium weight text.-->
+                                                <!--                                    </p>-->
+
+                                            </div>
+                                            <div
+                                                    class="transition-swing  text-caption d-flex justify-start mb-6"
+                                                    v-text="arrItem.value"
+                                            >
+
+
+                                            </div>
+                                        </div>
+                                    </v-col>
+                                </v-row>
+
+
+                            </div>
+
+                        </div>
+                    </v-col>
+                </v-row>
+            </div>
+
+
         </v-container>
 
+        <v-overlay
+                :absolute="absolute"
+                light
+                :dark="false"
+                :value="overlayVisible"
+                @click="hideOverlay"
+        >
+            <zDropDown :items="allPhoneItems" @toggle="toggleDropDown" v-click-outside="hideOverlay"></zDropDown>
 
-
+        </v-overlay>
 
 
         <template v-if="false">
@@ -318,7 +450,8 @@
                                     <div>
                                         <div>
                                             <ul>
-                                                <li class="pc-phone-picker-active pc-phone-picker-disabled">iQOO U3x标准版<br>已选
+                                                <li class="pc-phone-picker-active pc-phone-picker-disabled">iQOO
+                                                    U3x标准版<br>已选
                                                 </li>
                                                 <li class=" pc-phone-picker-disabled">iQOO Neo5 活力版<br>已选</li>
                                                 <li class=" pc-phone-picker-disabled">iQOO Z3<br>已选</li>
@@ -365,7 +498,97 @@
         </template>
 
 
+        <v-sheet
+                v-if="false"
+                height="400"
+                class="overflow-hidden"
+                style="position: relative;"
+        >
+            <v-container class="fill-height">
+                <v-row
+                        align="center"
+                        justify="center"
+                >
+                    <v-btn
+                            color="pink"
+                            dark
+                            @click.stop="drawer = !drawer"
+                    >
+                        Toggle
+                    </v-btn>
+                </v-row>
+            </v-container>
 
+            <v-navigation-drawer
+                    v-model="drawer"
+                    absolute
+                    temporary
+                    floating
+            >
+                <v-list-item>
+                    <v-list-item-avatar>
+                        <v-img src="https://randomuser.me/api/portraits/men/78.jpg"></v-img>
+                    </v-list-item-avatar>
+
+                    <v-list-item-content>
+                        <v-list-item-title>John Leider</v-list-item-title>
+                    </v-list-item-content>
+                </v-list-item>
+
+                <v-divider></v-divider>
+
+                <v-list dense>
+                    <v-list-item
+                            v-for="item in items"
+                            :key="item.title"
+                            link
+                    >
+                        <v-list-item-icon>
+                            <v-icon>{{ item.icon }}</v-icon>
+                        </v-list-item-icon>
+
+                        <v-list-item-content>
+                            <v-list-item-title>{{ item.title }}</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+                </v-list>
+            </v-navigation-drawer>
+        </v-sheet>
+        <v-item-group mandatory v-if="false">
+            <v-sheet
+                    class="overflow-y-auto"
+                    max-height="600"
+                    tile
+            >
+                <v-item
+                        v-for="[
+          c,
+          text,
+
+          margin
+        ] in classes"
+                        :key="c"
+                >
+                    <template v-slot:default="{ active, toggle }">
+                        <v-sheet
+                                :color="active ? $vuetify.theme.dark ? 'grey darken-3' : 'grey lighten-4' : undefined"
+                                class="px-4 pt-4 pb-3"
+                                tile
+                                style="cursor: pointer;"
+                        >
+                            <div
+                                    :class="[`text-${c}`, active && `mb-${margin}`]"
+                                    class="transition-swing"
+                                    v-text="text"
+                            >
+                            </div>
+
+
+                        </v-sheet>
+                    </template>
+                </v-item>
+            </v-sheet>
+        </v-item-group>
     </div>
 </template>
 
@@ -374,17 +597,32 @@
     import data from '@/assets/data/phone'
     import zDropDown from '@/components/z-drop-down'
     import zPhoneButton from '@/components/z-phone-button'
-    import ZContent from "./z-content";
+    // import ZContent from "./z-content";
 
     export default {
         name: "battle",
         components: {
-            ZContent,
+            // ZContent,
             zDropDown,
             zPhoneButton
         },
         data() {
             return {
+                classes: [
+                    ['h1', 'Heading 1', '6rem', '300', '-.015625em', -1],
+                    ['h2', 'Heading 2', '3.75rem', '300', '-.0083333333em', 0],
+                    ['h3', 'Heading 3', '3rem', '400', 'normal', 1],
+                    ['h4', 'Heading 4', '2.125rem', '400', '.0073529412em', 2],
+                    ['h5', 'Heading 5', '1.5rem', '400', 'normal', 2],
+                    ['h6', 'Heading 6', '1.25rem', '500', '.0125em', 3],
+                    ['subtitle-1', 'Subtitle 1', '1rem', '400', '.009375em', 4],
+                    ['subtitle-2', 'Subtitle 2', '0.875rem', '500', '.0071428571em', 4],
+                    ['body-1', 'Body 1', '1rem', '400', '.03125em', 4],
+                    ['body-2', 'Body 2', '0.875rem', '400', '.0178571429em', 4],
+                    ['button', 'Button', '0.875rem', '500', '.0892857143em', 4],
+                    ['caption', 'Caption', '0.75rem', '400', '.0333333333em', 4],
+                    ['overline', 'Overline', '0.75rem', '500', '.1666666667em', 4],
+                ],
                 skeletonShow: false,
                 skeletonAttrs: {
                     class: 'mb-6',
@@ -429,8 +667,18 @@
                 showDropDownOne: false,
                 showDropDownTwo: false,
                 allPhoneItems: [],
-                itemOne:{},
-                itemTwo:{},
+                itemOne: {},
+                itemTwo: {},
+                absolute: true,
+                opacity: 1,
+                drawer: null,
+                items: [
+                    {title: 'Home', icon: 'mdi-view-dashboard'},
+                    {title: 'About', icon: 'mdi-forum'},
+                ],
+                selectedItemOne: '',
+                selectedItemTwo: '',
+                svg: {}
             }
         },
         created() {
@@ -438,11 +686,14 @@
 
             // this.dropdown_one = data.allPhone.slice(0,1)
             // this.dropdown_two = data.allPhone.slice(1,2)
-            this.dropdown_one_label = data.allPhone[0].name;
-            this.dropdown_two_label = data.allPhone[1].name;
+            this.svg = data.svg;
+
             this.allPhoneItems = data.allPhone;
-            this.itemOne = data.allPhone[0];
-            this.itemTwo = data.allPhone[1]
+            this.itemOne = JSON.parse(JSON.stringify(data.allPhone[0]));
+            this.itemTwo = JSON.parse(JSON.stringify(data.allPhone[1]));
+            // this.itemOne.dataMerge = JSON.parse(JSON.stringify(this.itemOne.datas));
+           this.fnn()
+
         },
         computed: {
             likesAllFruit() {
@@ -456,6 +707,9 @@
                 if (this.likesSomeFruit) return 'mdi-minus-box'
                 return 'mdi-checkbox-blank-outline'
             },
+            overlayVisible() {
+                return this.showDropDownOne || this.showDropDownTwo
+            }
         },
 
         methods: {
@@ -483,17 +737,35 @@
                 }
 
             },
-            toggleDropDown(value){
+            toggleDropDown(value) {
 
-               if(!this.showDropDownOne){
-                   this.itemOne = value;
-               }
-                if(!this.showDropDownTwo){
+                if (!this.showDropDownOne) {
+                    this.itemOne = value;
+                }
+                if (!this.showDropDownTwo) {
                     this.itemTwo = value;
                 }
 
                 this.showDropDownOne = false;
                 this.showDropDownTwo = false;
+                this.fnn()
+            },
+            hideOverlay() {
+
+                this.showDropDownOne = false;
+                this.showDropDownTwo = false;
+            },
+            fnn(){
+                this.dropdown_one_label = this.itemOne.name;
+                this.dropdown_two_label = this.itemTwo.name;
+                this.itemOne.datas.forEach(data1 =>{
+                    this.itemTwo.datas.forEach(data2 =>{
+                        if(data1.title === data2.title ){
+                            data1.listOne = data1.list;
+                            data1.listTwo = data2.list;
+                        }
+                    })
+                })
             }
         },
     }
@@ -501,255 +773,32 @@
 
 <style lang='scss'>
 
-    .pc-phone-picker-series li, .pc-phone-picker-products li {
-        cursor: pointer;
-        white-space: nowrap;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        position: relative;
-        color: #242933;
-        font-size: 14px;
-        text-align: center;
-        font-family: sans-serif;
-        width: 100px;
-        height: 64px;
-        line-height: 64px;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
+
+    .ch-no-padding {
+        padding: 0
     }
 
-    .pc-phone-picker-active {
-        background: #fff;
-    }
-    .pc-phone-picker-products{
-        position: absolute;
-        left: 110px;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        overflow: hidden;
-        margin-bottom: -2px;
-    }
-
-
-    .pc-phone-picker-products>div{
-        padding-right: 12px;
-        max-height: 402px;
-        overflow: hidden;
-    }
-
-    .mCustomScrollBox{
-        position: relative;
-        overflow: hidden;
-        height: 100%;
-        max-width: 100%;
-        outline: 0;
-        direction: ltr;
-    }
-    .pc-phone-picker-products>div>div{
-        overflow: hidden;
-    }
-    .mCSB_container{
-        overflow: hidden;
-        width: auto;
-        height: auto;
-    }
-    .mCSB_scrollTools{
-        opacity: .75;
-        filter: "alpha(opacity=75)";
-        -ms-filter: "alpha(opacity=75)";
-    }
-    .mCSB_scrollTools, .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools
-    .mCSB_buttonUp, .mCSB_scrollTools .mCSB_buttonDown, .mCSB_scrollTools .mCSB_buttonLeft, .mCSB_scrollTools .mCSB_buttonRight{
-        -webkit-transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
-        -moz-transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
-        -o-transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
-        transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
-    }
-
-    .pc-phone-picker-products ul{
-        min-width: -webkit-calc(225px + 2ch);
-        min-width: -moz-calc(225px + 2ch);
-        min-width: calc(225px + 2ch);
-        font-size: 12px;
-        line-height: 0;
-        text-align: justify;
-        white-space: normal;
-        margin-bottom: 0;
-    }
-    .pc-phone-picker-products li:not(.pc-phone-picker-disabled):hover, .pc-phone-picker-products li.pc-phone-picker-active{
-        color: #242933;
-    }
-
-    .pc-phone-picker-products li.pc-phone-picker-disabled{
-        color: #8a8f99;
-        line-height: 20px;
-        padding-top: 10px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        font-family: VIVO-FONT-WEB-BOLD,sans-serif;
-    }
-    .pc-phone-picker-products li{
-        display: inline-block;
-        vertical-align: top;
-        font-size: 14px;
-        text-align: center;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-        color: #8a8f99;
-        width: 100px;
-        height: 64px;
-        line-height: 64px;
-    }
-
-    .pc-phone-picker-series li, .pc-phone-picker-products li{
-        cursor: pointer;
-        white-space: nowrap;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        overflow: hidden;
-    }
-    .pc-phone-picker-products li:nth-of-type(2n){
-        padding-right: 12px;
-    }
-
-    .pc-phone-picker-products li.pc-phone-picker-disabled{
-        color: #8a8f99;
-        line-height: 20px;
-        padding-top: 10px;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        font-family: VIVO-FONT-WEB-BOLD,sans-serif;
-    }
-    .mCSB_scrollTools{
-        position: absolute;
-        width: 16px;
-        height: auto;
-        left: auto;
-        top: 0;
-        right: 0;
-        bottom: 0;
-    }
-    .mCSB_scrollTools .mCSB_draggerContainer{
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        height: auto;
-    }
-    .mCSB_scrollTools .mCSB_dragger{
-        cursor: pointer;
-        width: 100%;
-        height: 30px;
-        z-index: 1;
-    }
-    .mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail, .mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail{
-        width: 4px;
-        background-color: #fff;
-        background-color: rgba(255,255,255,.1);
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px
-    }
-    .mCSB_scrollTools .mCSB_draggerRail{
-        background-color: #000;
-        background-color: rgba(0,0,0,.4);
-        filter: "alpha(opacity=40)";
-        -ms-filter: "alpha(opacity=40)";
-        width: 2px;
-        height: 100%;
-        margin: 0 auto;
-        -webkit-border-radius: 16px;
-        -moz-border-radius: 16px;
-        border-radius: 16px;
-
-    }
-    .mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-        width: 6px;
-        /* background-color: #cdcdcd; */
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
-    }
-
-    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-        background-color: #fff;
-        background-color: rgba(255,255,255,.75);
-        filter: "alpha(opacity=75)";
-        -ms-filter: "alpha(opacity=75)";
-    }
-    .mCSB_scrollTools, .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_buttonUp, .mCSB_scrollTools .mCSB_buttonDown, .mCSB_scrollTools .mCSB_buttonLeft, .mCSB_scrollTools .mCSB_buttonRight{
-        -webkit-transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
-        -moz-transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
-        -o-transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
-        transition: opacity .2s ease-in-out,background-color .2s ease-in-out;
-    }
-    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-        position: relative;
-        width: 4px;
-        height: 100%;
-        margin: 0 auto;
-        -webkit-border-radius: 16px;
-        -moz-border-radius: 16px;
-        border-radius: 16px;
-        text-align: center;
-    }
-    .mCustomScrollbar{
-        touch-action: pinch-zoom;
-    }
-
-    .page-contrast-wrapper .product-info-wrapper .product-name-lists .name-list:first-child .pc-phone-picker-container{
-        left: 0;
-        right: auto;
-    }
-    .pc-phone-picker-container{
-        position: absolute;
-        width: 350px;
-        z-index: 98;
-        background-color: #fff;
-        -webkit-border-radius: 0 0 24px 24px;
-        -moz-border-radius: 0 0 24px 24px;
-        border-radius: 0 0 24px 24px;
-        overflow: hidden;
-        border: solid 1px #ecedf0;
-        border-top: 0;
-        padding-top: 4px;
-        left: 0;
-        display: none;
-    }
-
-
-
-
-    .ch-no-padding{
-        padding:0
-    }
-
-    .ch-no-padding .v-sheet.v-banner{
+    .ch-no-padding .v-sheet.v-banner {
         width: 100%;
     }
 
-    .ch-flex-column{
+    .ch-flex-column {
         display: flex;
         flex-direction: column;
     }
 
-    .z-phone-button{
+    .z-phone-button {
         max-height: 50px;
     }
-    .ch-row-bar{
+
+    .ch-row-bar {
         position: fixed;
         top: 70px;
         width: 100%;
         z-index: 9;
     }
-    .ch-row-content{
+
+    .ch-row-content {
 
         left: 0;
         right: 0;
@@ -757,7 +806,12 @@
         position: absolute;
         overflow-y: auto;
         /* overflow-x: hidden; */
-        top: 50px;
+        top: 60px;
+    }
+
+    .ch-banner {
+        width: 100%;
+        margin: 30px;
     }
 </style>
 

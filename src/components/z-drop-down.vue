@@ -67,7 +67,7 @@
             <template v-if="true">
 
 
-                <v-container class="grey lighten-5" style="height: 100%;padding-top: 0">
+                <div class="grey lighten-5" style="height: 100%;padding-top: 0; width:100%">
                     <v-row
                             no-gutters
                             style=""
@@ -146,7 +146,7 @@
                             </v-list>
                         </v-col>
                     </v-row>
-                </v-container>
+                </div>
             </template>
         </div>
 
